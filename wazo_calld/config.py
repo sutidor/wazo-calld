@@ -1,4 +1,4 @@
-# Copyright 2015-2019 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2015-2020 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
@@ -54,11 +54,13 @@ _DEFAULT_CONFIG = {
         'password': 'guest',
         'host': 'localhost',
         'port': 5672,
-        'exchange_name': 'xivo',
-        'exchange_type': 'topic',
+        'subscribe_exchange_name': 'wazo-headers',
+        'subscribe_exchange_type': 'headers',
+        'publish_exchange_name': 'xivo',
+        'publish_exchange_type': 'topic',
     },
     'collectd': {
-        'exchange_name': 'collectd',
+        'publish_exchange_name': 'collectd',
     },
     'confd': {
         'host': 'localhost',
